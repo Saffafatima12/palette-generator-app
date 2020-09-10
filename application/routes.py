@@ -20,7 +20,7 @@ def index():
 
 
 
-@app.route("/", methods=['GET','POST'])
+@app.route("/", methods=['POST'])
 def predict():
     message = request.get_json(force=True)
     encoded = message['image']
