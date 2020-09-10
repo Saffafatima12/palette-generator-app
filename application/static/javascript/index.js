@@ -43,7 +43,7 @@ $("#predict-button").click(function(){
         
     // POPULATE THE COLOR NAMES AND CIRCLES 
         
-    $.post("http://127.0.0.1:5000/", JSON.stringify(message), function(response){
+    $.post("https://the-palette-generator.herokuapp.com/", JSON.stringify(message), function(response){
             
        $.each( response, function( i, val ) {
          $( "#color_" + i ).text( val);

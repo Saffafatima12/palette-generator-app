@@ -43,3 +43,4 @@ def predict():
 
 
 # image = Image.open(io.BytesIO('static/work-remote.jpg'))
+
