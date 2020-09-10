@@ -1,0 +1,55 @@
+
+
+
+
+
+
+ /* THE BUTTONS */
+
+.up-arrow-button {
+  
+  background-color: #eddfec;
+  border: none;
+  font-size: 18px;
+  margin: 15px;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  cursor: pointer;
+}
+
+
+
+
+.to-top{
+	color:white;
+	padding-top:1.8em;
+	display:inline-block;/* or block */
+	position:relative;
+	border-color:#4b0c63;
+	text-decoration:none;
+	transition:all .3s ease-out;
+}
+.to-top:before{
+	content:'▲';
+	color: #4b0c63;
+	font-size:2em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em #4b0c63;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+.to-top:hover{
+	color:#bf0863k;
+	border-color:#bf0863;
+}
+.to-top:hover:before{
+	transform: rotate(360deg);
+}

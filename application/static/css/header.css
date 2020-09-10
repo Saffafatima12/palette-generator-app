@@ -1,0 +1,157 @@
+
+
+/* THE HEADER */
+
+
+@media (min-width: 380px){
+#header-container {
+
+  border: none;
+  border-radius: 30px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  margin-top: 0.5%;
+  margin-bottom: 1.5%;
+  margin-left: -15%;
+  margin-right: -10%;
+  /*border: 4px solid;*/
+ 
+}
+
+
+.header img {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin-top: -5%;
+  margin-left: 7%
+  
+
+}
+
+.header h1 {
+  position: relative;
+  font-size:250%;
+  /*text-shadow: 2px 2px 4px #000000;*/
+}
+
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+}
+
+
+/*************************************/
+
+@media (min-width: 760px){
+#header-container {
+
+  border: none;
+  border-radius: 30px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  margin-top: 0.5%;
+  margin-bottom: 1.5%;
+  margin-left: -15%;
+  margin-right: -10%;
+  /*border: 4px solid;*/
+ 
+}
+
+
+.header img {
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin-top: -5%;
+  margin-left: 7%
+  
+
+}
+
+.header h1 {
+  position: relative;
+  font-size:350%;
+  /*text-shadow: 2px 2px 4px #000000;*/
+}
+
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+}
+
+
+
+/***************************************************/
+
+
+@media (min-width: 1024px){
+
+#header-container {
+
+  border: none;
+  border-radius: 30px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  margin-top: 0.5%;
+  margin-bottom: 1.5%;
+  margin-left: -15%;
+  margin-right: -10%;
+  /*border: 4px solid;*/
+ 
+}
+
+
+.header img {
+  float: left;
+  width: 300px;
+  height: 300px;
+  margin-top: -5%;
+  margin-left: 7%
+  
+
+}
+
+.header h1 {
+  position: relative;
+  font-size:550%;
+  /*text-shadow: 2px 2px 4px #000000;*/
+}
+
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+}

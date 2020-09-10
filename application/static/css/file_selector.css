@@ -1,0 +1,126 @@
+
+
+/* FILE SELECTOR */
+
+.file-upload {;
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.file-upload-btn {
+  font-size: 18px;
+  padding: 10px 10px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #4b0c63;
+  color: white;
+  border: 2px solid #4b0c63;
+  margin-right: 2%;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  width: 100%;
+  cursor: pointer;
+  
+}
+
+.file-upload-btn:hover,
+.file-upload-btn:focus,
+.file-upload-btn:active {
+    transform: scale(1.1);
+}
+
+
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+  margin-top: 20px;
+  border: 2px dashed white;
+  position: relative;
+
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  border: 2px dashed white;
+  background-color: rgba(111,41,97,.3)
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 100;
+  color: white;
+  padding: 60px 0;
+}
+
+.file-upload-image {
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  font-size: 18px;
+  padding: 10px 10px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #4b0c63;
+  color: white;
+  border: 2px solid #4b0c63;
+  margin-right: 2%;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+.remove-image:hover,
+.remove-image:focus,
+.remove-image:active {
+    transform: scale(1.1);
+}
+
+
+
+
+/* THE SELECTED IMAGE */
+
+#selected-image{
+
+max-width: 330px;
+max-height: 330px;
+
+}

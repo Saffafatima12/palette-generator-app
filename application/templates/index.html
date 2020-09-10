@@ -1,0 +1,101 @@
+
+
+<!DOCTYPE html>
+
+<head>
+    <title>The Palette Generator</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/file_selector.css">
+    <link rel="stylesheet" href="/static/css/slider.css">
+    <link rel="stylesheet" href="/static/css/button.css">
+    <link rel="stylesheet" href="/static/css/palette.css">
+    <link rel="stylesheet" href="/static/css/loader.css">
+    <link rel="stylesheet" href="/static/css/explanation.css">
+    <link rel="stylesheet" href="/static/css/go_to.css">
+    <link rel="stylesheet" href="/static/css/up_arrow.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>  
+    
+    <div class="container-top" id="container-top">
+        
+        <!---- THE HEADER ----->
+        <div id="header-container">
+          {% include "Includes/header.html" %} 
+        </div>
+        
+        <div id="explanation-container">
+            
+            <!---- EXPLANATION ---->
+            <div id= "explanation">
+              {% include "Includes/explanation.html" %} 
+            </div>
+        
+            <br></br>
+            <br></br>
+            
+            <!---- GO TO GENERATOR ---->
+            <div id= "go-to">
+              {% include "Includes/go_to.html" %} 
+            </div>
+        </div>
+    
+    </div>
+    
+    
+    
+    <div class="container grid" id="container">
+        
+        <!-- THE FILE SELECTOR -->  
+        <div class = "box box1">
+          {% include "Includes/file_selector.html" %}
+        </div>
+         
+        <!-- THE SLIDER -->       
+        <div class = "box box2">
+          
+          {% include "Includes/slider.html" %}
+          
+          <!-- THE BUTTONS -->    
+          <br></br>	
+          {% include "Includes/buttons.html" %}
+          {% include "Includes/loader.html" %}
+         
+        </div>
+        
+        <!-- THE COLOR PALLETE -->     
+    
+        <div class = "box box3">
+          {% include "Includes/color_palette.html" %}
+        </div>
+        </div>
+         <!--GO BACK UP BUTTON-->
+         
+         <div class = "box4">
+         {% include "Includes/up_arrow.html" %}
+         </div>
+   
+    
+    
+    
+  
+     
+
+    
+    <!-- JQUERY FOR SLIDER -->     
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src= "/static/javascript/slider.js"></script>
+       
+    
+    <!-- JQUERY FOR THE REST -->      
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src= "/static/javascript/index.js"></script>
+
+</body>
+
+</html>
