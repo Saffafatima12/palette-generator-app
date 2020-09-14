@@ -6,10 +6,15 @@ let base64Image;
 $(".file-upload-input").change(function() {
     let reader = new FileReader();
     reader.onload = function(e) {
+    
         let dataURL = reader.result;
         $('.file-upload-image').attr("src", dataURL);
-        base64Image = dataURL.replace("data:image/png;base64,","");
-        console.log(base64Image);
+        base64Image = dataURL.replace("data:image\/png;base64,","");  //stripping off the metadata from the image if in png format
+        
+        if (base64Image == dataURL){
+         base64Image = dataURL.replace("data:image\/jpeg;base64,","");} //stripping off the metadata from the image if in jpg format
+        
+        console.log(base64Image) // just to check if things are working fine
     }
     
     
@@ -90,32 +95,6 @@ $("#reset-button").click(function(){
 });  
  
 
-// FOR THE UPLOAD BUTTON
-
-var btnUpload = $("#upload_file"),
-		btnOuter = $(".button_outer");
-	btnUpload.on("change", function(e){
-		var ext = btnUpload.val().split('.').pop().toLowerCase();
-		if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
-			$(".error_msg").text("Not an Image...");
-		} else {
-			$(".error_msg").text("");
-			btnOuter.addClass("file_uploading");
-			setTimeout(function(){
-				btnOuter.addClass("file_uploaded");
-			},3000);
-			var uploadedFile = URL.createObjectURL(e.target.files[0]);
-			setTimeout(function(){
-				$("#uploaded_view").append('<img src="'+uploadedFile+'" />').addClass("show");
-			},3500);
-		}
-	});
-	$(".file_remove").on("click", function(e){
-		$("#uploaded_view").removeClass("show");
-		$("#uploaded_view").find("img").remove();
-		btnOuter.removeClass("file_uploading");
-		btnOuter.removeClass("file_uploaded");
-	});
 	
 	
 // FOR THE FILE selector
@@ -142,7 +121,7 @@ function readURL(input) {
 }
 
 function removeUpload() {
-  $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+  $('.file-upload-input').replaceWith($('.file-upload-input'));
   $('.file-upload-content').hide();
   $('.image-upload-wrap').show();
 }
